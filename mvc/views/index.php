@@ -29,7 +29,7 @@
                     <td>".$row["id"]."</td>
                     <td>".$row["title"]."</td>
                     <td>".$row["description"]."</td>
-                    <td>".$row["image"]."</td>
+                    <td><img src=./mvc/uploads/".$row["image"]." width=\"100px\" alt=\"\" ></td>
                     <td>".$row["status"]."</td>
                     <td>".$row["create_at"]."</td>
                     <td>".$row["update_at"]."</td>

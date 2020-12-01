@@ -10,7 +10,7 @@
 
     <?php
         while($row = mysqli_fetch_array($data["product"])){
-            echo "<form method=\"post\">";
+            echo "<form method=\"post\" enctype=\"multipart/form-data\">";
             echo "<input type=\"hidden\" name=\"id\" value=".$row["id"].">";
             echo "Title: <input type=\"text\" name=\"title\" value=".$row["title"]."><br>";
             echo "Description: 
@@ -29,6 +29,7 @@
             </script>
             ";
             echo "<input type=\"submit\">";
+            echo "<a href=\"http://localhost/mvc/admin/\" type=\"button\">Cancel</a>";
             echo "</form>";
         }
     ?>

@@ -10,9 +10,9 @@ PRODUCTS
 
 - /home/ ---> list PRODUCTS with detail button and paging
 - /home/products/1/ ---> product detail
-- /admin/products/ ---> list PRODUCTS with action button and paging
-- /admin/products/new/ ---> add
-- /admin/products/1/edit/ ---> edit
-- /admin/products/delete/ ---> delete
+- /admin/ ---> list PRODUCTS with action button and paging
+- /admin/new/ ---> add
+- /admin/edit/1/ ---> edit
+- /admin/delete/1/ ---> delete
 
 Rewrite URL sử dụng .htaccess

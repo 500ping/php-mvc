@@ -8,7 +8,7 @@
 <body>
     add product
 
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         Title: 
         <input type="text" name="title"><br>
         Description:

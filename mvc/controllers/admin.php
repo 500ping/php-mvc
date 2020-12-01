@@ -21,6 +21,13 @@
                 $image = $_POST["image"];
                 $status = $_POST["status"];
 
+                // $image = "";
+
+                if (isset($_FILES['image'])) {
+                    move_uploaded_file($_FILES['image']['tmp_name'], './mvc/uploads/' . $_FILES['image']['name']);
+                    $image = $_FILES['image']['name'];
+                }
+
                 $productModel -> addProduct($title, $description, $image, $status);
 
                 header("Location: /mvc/admin/");
@@ -39,8 +46,13 @@
                 $id = $_POST["id"];
                 $title = $_POST["title"];
                 $description = $_POST["description"];
-                $image = $_POST["image"] ? $_POST["image"] : $_POST["oldImage"];
+                $image = $_POST["oldImage"];
                 $status = $_POST["status"];
+
+                if (!empty($_FILES['image']['name'])) {
+                    move_uploaded_file($_FILES['image']['tmp_name'], './mvc/uploads/' . $_FILES['image']['name']);
+                    $image = $_FILES['image']['name'];
+                }
 
                 // echo $image;
 
