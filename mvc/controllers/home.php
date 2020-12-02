@@ -6,9 +6,10 @@
 
             $products = $productModel -> getProducts();
 
-            $this -> view("index",[
+            $this -> view("layout",[
                 "title" => "List products",
-                "products" => $products
+                "products" => $products,
+                "page" => "index"
             ]);
         }
 
@@ -16,9 +17,10 @@
             $productModel = $this -> model("ProductModel");
             $productDetails =  $productModel -> getProduct($id);
 
-            $this -> view("product-detail",[
+            $this -> view("layout",[
                 "title" => "Details",
-                "product" => $productDetails
+                "product" => $productDetails,
+                "page" => "product-detail"
             ]);
         }
     }

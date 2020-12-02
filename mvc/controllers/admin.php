@@ -6,9 +6,10 @@
 
             $products = $productModel -> getProducts();
 
-            $this -> view("admin/index",[
+            $this -> view("admin/layout",[
                 "title" => "List products",
-                "products" => $products
+                "products" => $products,
+                "page" => "index"
             ]);
         }
 
@@ -33,8 +34,9 @@
                 header("Location: /mvc/admin/");
             } 
 
-            $this -> view("admin/add",[
+            $this -> view("admin/layout",[
                 "title" => "Add product",
+                "page" => "add"
             ]);
         }
 
@@ -61,9 +63,10 @@
                 header("Location: /mvc/admin/");
             } 
 
-            $this -> view("admin/edit",[
+            $this -> view("admin/layout",[
                 "title" => "Edit product",
-                "product" => $productDetails
+                "product" => $productDetails,
+                "page" => "edit"
             ]);
         }
 

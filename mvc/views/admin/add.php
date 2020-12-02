@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    add product
 
-    <form method="post" enctype="multipart/form-data">
-        Title: 
-        <input type="text" name="title"><br>
-        Description:
-        <textarea name="description" id="" cols="30" rows="10"></textarea><br>
-        Image:
-        <input type="file" name="image" id=""><br>
-        Status:
-        <select name="status">
+<h1 class="text-center">add product</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" id="title">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input type="file" class="form-control-file" name="image" id="image">
+    </div>
+    <div class="form-group">
+    <label for="status">Status</label>
+        <select class="form-control" name="status" id="status">
             <option value="1">Enable</option>
             <option value="2">Disable</option>
         </select>
-        <br>
-        <!-- <input type="text" name="status"><br> -->
-
-        <input type="submit">
-    </form>
-</body>
-</html>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

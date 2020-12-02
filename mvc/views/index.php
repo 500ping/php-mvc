@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>
-        <?php
-            echo $data["title"];
-        ?>
-    </h2>
+<h1 class="text-center">
+    <?php
+        echo $data["title"];
+    ?>
+</h1>
 
-    <table style="width:100%" border="1">
+<table style="width:100%" class="display" border="1" id="example">
+    <thead>    
         <tr>
             <th>ID</th>
             <th>Title</th> 
@@ -23,22 +16,10 @@
             <th>Update_at</th>
             <th>Action</th>
         </tr>
-        <?php
-            while($row = mysqli_fetch_array($data["products"])){
-                echo "<tr>
-                    <td>".$row["id"]."</td>
-                    <td>".$row["title"]."</td>
-                    <td>".$row["description"]."</td>
-                    <td><img src=./mvc/uploads/".$row["image"]." width=\"100px\" alt=\"\" ></td>
-                    <td>".$row["status"]."</td>
-                    <td>".$row["create_at"]."</td>
-                    <td>".$row["update_at"]."</td>
-                    <td><a href=\"http://localhost/mvc/home/show/".$row["id"]."\">show</a></td>
-                </tr>";
-            }
-        ?>
-    </table>
+    </thead>
+</table>
 
-    <a href="http://localhost/mvc/admin/">ADMIN</a>
-</body>
-</html>
+<br>
+
+<a href="../../mvc/admin/" class="btn btn-danger">ADMIN</a>
+    
