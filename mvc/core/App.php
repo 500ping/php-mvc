@@ -16,6 +16,8 @@
                     $this -> controller = $arr[0];
                     unset($arr[0]);
                 }
+            } else {
+                header("Location: /mvc/home/");
             }
 
             require_once "./mvc/controllers/".$this -> controller.".php";
